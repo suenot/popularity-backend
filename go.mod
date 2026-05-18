@@ -12,13 +12,14 @@ require (
 	github.com/suenot/w-popularity-parser-habr v0.0.0-20260518175819-31ef514782a2
 	github.com/suenot/w-popularity-parser-instagram v0.0.0-20260518175944-6cd6ccf88df6
 	github.com/suenot/w-popularity-parser-linkedin v0.0.0-20260518183250-fb12acb38abd
+	github.com/suenot/w-popularity-parser-reddit v0.0.0-20260518190910-49fb55425740
 	github.com/suenot/w-popularity-parser-smartlab v0.0.0-20260518180128-3772c8fca15c
 	github.com/suenot/w-popularity-parser-stackoverflow v0.0.0-20260518183226-229213f97024
 	github.com/suenot/w-popularity-parser-tbank-pulse v0.0.0-20260518180316-96834cd57c67
 	github.com/suenot/w-popularity-parser-telegram v0.0.0-20260518175754-141ecede99bf
 	github.com/suenot/w-popularity-parser-x v0.0.0-20260518183556-4aece157dc9c
 	github.com/suenot/w-popularity-parser-youtube v0.0.0-20260518183324-ccf8780815cf
-	github.com/suenot/w-popularity-shared v0.0.0-20260518102401-d17456f924be
+	github.com/suenot/w-popularity-shared v0.0.0-20260518190708-2c23dae0af50
 )
 
 require (

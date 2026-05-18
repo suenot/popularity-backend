@@ -9,6 +9,7 @@ import (
 	habr "github.com/suenot/w-popularity-parser-habr"
 	instagram "github.com/suenot/w-popularity-parser-instagram"
 	linkedin "github.com/suenot/w-popularity-parser-linkedin"
+	reddit "github.com/suenot/w-popularity-parser-reddit"
 	smartlab "github.com/suenot/w-popularity-parser-smartlab"
 	stackoverflow "github.com/suenot/w-popularity-parser-stackoverflow"
 	tbankpulse "github.com/suenot/w-popularity-parser-tbank-pulse"
@@ -71,6 +72,10 @@ func Build(cfg config.Config) Registry {
 	r[shared.PlatformSmartLab] = smartlab.New(smartlab.Config{
 		Credential:  cfg.SmartLabCredential,
 		CamoufoxURL: cfg.CamoufoxURL,
+	})
+
+	r[shared.PlatformReddit] = reddit.New(reddit.Config{
+		BearerToken: cfg.RedditBearerToken,
 	})
 
 	return r

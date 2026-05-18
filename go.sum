@@ -85,6 +85,8 @@ github.com/suenot/w-popularity-parser-instagram v0.0.0-20260518175944-6cd6ccf88d
 github.com/suenot/w-popularity-parser-instagram v0.0.0-20260518175944-6cd6ccf88df6/go.mod h1:raDA3OPdrv5NbfhnZMvME4xKue3XUuzOEo7VwB6BpX0=
 github.com/suenot/w-popularity-parser-linkedin v0.0.0-20260518183250-fb12acb38abd h1:Nk75qG87P7Yt83KeFGB2SzekhN2LwnlmO9XgbGMwbbA=
 github.com/suenot/w-popularity-parser-linkedin v0.0.0-20260518183250-fb12acb38abd/go.mod h1:SLx8HPk1tHk5xVzllzyLiiOWSNZ1MWZqFLN8WSSD558=
+github.com/suenot/w-popularity-parser-reddit v0.0.0-20260518190910-49fb55425740 h1:owCMkoZ8gZeyF6LYI/t4FTocyLaKsCVriPRtBaLvtV8=
+github.com/suenot/w-popularity-parser-reddit v0.0.0-20260518190910-49fb55425740/go.mod h1:9XMKMbjyrDc8A9KfZ7pwbMelRzCZgiZPIZ/V9JR2QFk=
 github.com/suenot/w-popularity-parser-smartlab v0.0.0-20260518180128-3772c8fca15c h1:A8AVI7k9lA6GmVX+3QxDKdKj8W4pP8wdXbkzd4VsMpY=
 github.com/suenot/w-popularity-parser-smartlab v0.0.0-20260518180128-3772c8fca15c/go.mod h1:JMF6w9pJ3M0Mv+cagPbC5d8DCR5kdkg/4E1EKm3ydJ4=
 github.com/suenot/w-popularity-parser-stackoverflow v0.0.0-20260518183226-229213f97024 h1:hXrCzmNvlH9IAWjrl4THWNuii3aTRZFM3p3asE6N5dI=
@@ -97,8 +99,8 @@ github.com/suenot/w-popularity-parser-x v0.0.0-20260518183556-4aece157dc9c h1:S/
 github.com/suenot/w-popularity-parser-x v0.0.0-20260518183556-4aece157dc9c/go.mod h1:HXeVwnWX2uwSN4t5HVFCTEOTGqWhD6QMVUZAD27G5lY=
 github.com/suenot/w-popularity-parser-youtube v0.0.0-20260518183324-ccf8780815cf h1:9SjezDclHHAG8QojaOkSJF6YOKqLxbI/Ir7d4LkERnk=
 github.com/suenot/w-popularity-parser-youtube v0.0.0-20260518183324-ccf8780815cf/go.mod h1:1RMAxU0t2T3a5y+gahw+spPve2jmZnnK29Tb0crb0pc=
-github.com/suenot/w-popularity-shared v0.0.0-20260518102401-d17456f924be h1:1yIRmQs3ySJgpfR2qPNr/nl6Pqhu2+NminuawS60C+g=
-github.com/suenot/w-popularity-shared v0.0.0-20260518102401-d17456f924be/go.mod h1:z/0kUj8wPN451u0v4Gtq6jV+OEwhXDwmLtMCkvY9o+s=
+github.com/suenot/w-popularity-shared v0.0.0-20260518190708-2c23dae0af50 h1:CfkumAHO0yOiffo0sdfiDZOzt/2lIPQ0CXp2vsyhStE=
+github.com/suenot/w-popularity-shared v0.0.0-20260518190708-2c23dae0af50/go.mod h1:z/0kUj8wPN451u0v4Gtq6jV+OEwhXDwmLtMCkvY9o+s=
 github.com/twitchyliquid64/golang-asm v0.15.1 h1:SU5vSMR7hnwNxj24w34ZyCi/FmDZTkS4MhqMhdFk5YI=
 github.com/twitchyliquid64/golang-asm v0.15.1/go.mod h1:a1lVb/DtPvCB8fslRZhAngC2+aY1QWCk3Cedj/Gdt08=
 github.com/ugorji/go/codec v1.3.1 h1:waO7eEiFDwidsBN6agj1vJQ4AG7lh2yqXyOXqhgQuyY=

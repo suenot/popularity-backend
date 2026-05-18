@@ -61,6 +61,9 @@ type Config struct {
 	LinkedInLIAT string
 	// Optional LinkedIn JSESSIONID companion cookie.
 	LinkedInJSESSIONID string
+	// Optional Reddit OAuth bearer token (REDDIT_BEARER_TOKEN env). Without
+	// it the parser uses Reddit's anonymous JSON endpoint (10 req/min cap).
+	RedditBearerToken string
 }
 
 // FromEnv reads configuration from the process environment.
@@ -92,6 +95,7 @@ func FromEnv() Config {
 		FacebookAccessToken:     os.Getenv("FACEBOOK_ACCESS_TOKEN"),
 		LinkedInLIAT:            os.Getenv("LINKEDIN_LI_AT"),
 		LinkedInJSESSIONID:      os.Getenv("LINKEDIN_JSESSIONID"),
+		RedditBearerToken:       os.Getenv("REDDIT_BEARER_TOKEN"),
 	}
 	c.Mode = Mode(strings.ToLower(string(c.Mode)))
 	return c
