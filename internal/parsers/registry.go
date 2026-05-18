@@ -30,14 +30,12 @@ func Build(cfg config.Config) Registry {
 	r := Registry{}
 
 	r[shared.PlatformYouTube] = youtube.New(youtube.Config{
-		APIKey: cfg.YouTubeAPIKey,
-		// yt-dlp is resolved via PATH inside the container.
+		APIKey: cfg.YouTubeAPIKey, // kept for back-compat; new parser scrapes HTML.
 	})
 
 	r[shared.PlatformX] = x.New(x.Config{
+		BearerToken: cfg.XBearerToken,
 		CamoufoxURL: cfg.CamoufoxURL,
-		// NitterMirrors left empty → uses DefaultNitterMirrors. Operators
-		// can override at runtime by editing the parser config layer.
 	})
 
 	r[shared.PlatformTelegram] = telegram.New(telegram.Config{
@@ -46,7 +44,7 @@ func Build(cfg config.Config) Registry {
 	})
 
 	r[shared.PlatformFacebook] = facebook.New(facebook.Config{
-		Credential:  cfg.FacebookCredential,
+		AccessToken: cfg.FacebookAccessToken,
 		CamoufoxURL: cfg.CamoufoxURL,
 	})
 
@@ -55,6 +53,8 @@ func Build(cfg config.Config) Registry {
 	})
 
 	r[shared.PlatformLinkedIn] = linkedin.New(linkedin.Config{
+		LIATCookie:  cfg.LinkedInLIAT,
+		JSESSIONID:  cfg.LinkedInJSESSIONID,
 		CamoufoxURL: cfg.CamoufoxURL,
 	})
 

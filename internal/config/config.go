@@ -53,6 +53,14 @@ type Config struct {
 	CamoufoxURL string
 	// Optional Stack Exchange app key (boosts quota to 10k/day).
 	StackExchangeKey string
+	// X (Twitter) API v2 bearer token (X_BEARER_TOKEN env).
+	XBearerToken string
+	// Facebook Page Access Token (FACEBOOK_ACCESS_TOKEN env).
+	FacebookAccessToken string
+	// LinkedIn li_at session cookie (LINKEDIN_LI_AT env).
+	LinkedInLIAT string
+	// Optional LinkedIn JSESSIONID companion cookie.
+	LinkedInJSESSIONID string
 }
 
 // FromEnv reads configuration from the process environment.
@@ -80,6 +88,10 @@ func FromEnv() Config {
 		SmartLabCredential:      os.Getenv("SMARTLAB_CREDENTIAL"),
 		CamoufoxURL:             os.Getenv("CAMOUFOX_URL"),
 		StackExchangeKey:        os.Getenv("STACKEXCHANGE_KEY"),
+		XBearerToken:            os.Getenv("X_BEARER_TOKEN"),
+		FacebookAccessToken:     os.Getenv("FACEBOOK_ACCESS_TOKEN"),
+		LinkedInLIAT:            os.Getenv("LINKEDIN_LI_AT"),
+		LinkedInJSESSIONID:      os.Getenv("LINKEDIN_JSESSIONID"),
 	}
 	c.Mode = Mode(strings.ToLower(string(c.Mode)))
 	return c

@@ -8,16 +8,16 @@ require (
 	github.com/golang-jwt/jwt/v5 v5.3.1
 	github.com/jackc/pgx/v5 v5.9.2
 	github.com/robfig/cron/v3 v3.0.1
-	github.com/suenot/w-popularity-parser-facebook v0.0.0-20260518180003-9b8ce7ea2609
+	github.com/suenot/w-popularity-parser-facebook v0.0.0-20260518183137-21442fcf664e
 	github.com/suenot/w-popularity-parser-habr v0.0.0-20260518175819-31ef514782a2
 	github.com/suenot/w-popularity-parser-instagram v0.0.0-20260518175944-6cd6ccf88df6
-	github.com/suenot/w-popularity-parser-linkedin v0.0.0-20260518180038-c218da981bbd
+	github.com/suenot/w-popularity-parser-linkedin v0.0.0-20260518183250-fb12acb38abd
 	github.com/suenot/w-popularity-parser-smartlab v0.0.0-20260518180128-3772c8fca15c
-	github.com/suenot/w-popularity-parser-stackoverflow v0.0.0-20260518175815-97ecb92c01cd
+	github.com/suenot/w-popularity-parser-stackoverflow v0.0.0-20260518183226-229213f97024
 	github.com/suenot/w-popularity-parser-tbank-pulse v0.0.0-20260518180316-96834cd57c67
 	github.com/suenot/w-popularity-parser-telegram v0.0.0-20260518175754-141ecede99bf
-	github.com/suenot/w-popularity-parser-x v0.0.0-20260518180130-c1ca68a10f83
-	github.com/suenot/w-popularity-parser-youtube v0.0.0-20260518181511-910c4b9b3b3c
+	github.com/suenot/w-popularity-parser-x v0.0.0-20260518183556-4aece157dc9c
+	github.com/suenot/w-popularity-parser-youtube v0.0.0-20260518183324-ccf8780815cf
 	github.com/suenot/w-popularity-shared v0.0.0-20260518102401-d17456f924be
 )
 
