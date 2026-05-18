@@ -8,16 +8,16 @@ require (
 	github.com/golang-jwt/jwt/v5 v5.3.1
 	github.com/jackc/pgx/v5 v5.9.2
 	github.com/robfig/cron/v3 v3.0.1
-	github.com/suenot/w-popularity-parser-facebook v0.0.0-20260518102855-5cb258db3efa
-	github.com/suenot/w-popularity-parser-habr v0.0.0-20260518102923-8a13cee9bb23
-	github.com/suenot/w-popularity-parser-instagram v0.0.0-20260518102904-b6ad7cb15ad1
-	github.com/suenot/w-popularity-parser-linkedin v0.0.0-20260518102914-58e925d67c63
-	github.com/suenot/w-popularity-parser-smartlab v0.0.0-20260518102939-f3822c0d5e71
-	github.com/suenot/w-popularity-parser-stackoverflow v0.0.0-20260518102929-f507bab2aa7b
-	github.com/suenot/w-popularity-parser-tbank-pulse v0.0.0-20260518102934-dc63bb3a7ac0
-	github.com/suenot/w-popularity-parser-telegram v0.0.0-20260518102842-79fb8ee1b699
-	github.com/suenot/w-popularity-parser-x v0.0.0-20260518102836-5fb2335b96c6
-	github.com/suenot/w-popularity-parser-youtube v0.0.0-20260518102820-c31957b9c97c
+	github.com/suenot/w-popularity-parser-facebook v0.0.0-20260518180003-9b8ce7ea2609
+	github.com/suenot/w-popularity-parser-habr v0.0.0-20260518175819-31ef514782a2
+	github.com/suenot/w-popularity-parser-instagram v0.0.0-20260518175944-6cd6ccf88df6
+	github.com/suenot/w-popularity-parser-linkedin v0.0.0-20260518180038-c218da981bbd
+	github.com/suenot/w-popularity-parser-smartlab v0.0.0-20260518180128-3772c8fca15c
+	github.com/suenot/w-popularity-parser-stackoverflow v0.0.0-20260518175815-97ecb92c01cd
+	github.com/suenot/w-popularity-parser-tbank-pulse v0.0.0-20260518180316-96834cd57c67
+	github.com/suenot/w-popularity-parser-telegram v0.0.0-20260518175754-141ecede99bf
+	github.com/suenot/w-popularity-parser-x v0.0.0-20260518180130-c1ca68a10f83
+	github.com/suenot/w-popularity-parser-youtube v0.0.0-20260518175608-9ab15b5088f3
 	github.com/suenot/w-popularity-shared v0.0.0-20260518102401-d17456f924be
 )
 
@@ -49,10 +49,10 @@ require (
 	github.com/ugorji/go/codec v1.3.1 // indirect
 	go.mongodb.org/mongo-driver/v2 v2.5.0 // indirect
 	golang.org/x/arch v0.23.0 // indirect
-	golang.org/x/crypto v0.48.0 // indirect
-	golang.org/x/net v0.51.0 // indirect
+	golang.org/x/crypto v0.51.0 // indirect
+	golang.org/x/net v0.54.0 // indirect
 	golang.org/x/sync v0.20.0 // indirect
-	golang.org/x/sys v0.41.0 // indirect
-	golang.org/x/text v0.35.0 // indirect
+	golang.org/x/sys v0.44.0 // indirect
+	golang.org/x/text v0.37.0 // indirect
 	google.golang.org/protobuf v1.36.10 // indirect
 )

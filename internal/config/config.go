@@ -48,6 +48,11 @@ type Config struct {
 	StackOverflowCredential string
 	TBankPulseCredential string
 	SmartLabCredential string
+
+	// Optional camoufox CDP endpoint used as scraping fallback by IG/FB/LinkedIn/etc.
+	CamoufoxURL string
+	// Optional Stack Exchange app key (boosts quota to 10k/day).
+	StackExchangeKey string
 }
 
 // FromEnv reads configuration from the process environment.
@@ -73,6 +78,8 @@ func FromEnv() Config {
 		StackOverflowCredential: os.Getenv("STACKOVERFLOW_CREDENTIAL"),
 		TBankPulseCredential:    os.Getenv("TBANK_PULSE_CREDENTIAL"),
 		SmartLabCredential:      os.Getenv("SMARTLAB_CREDENTIAL"),
+		CamoufoxURL:             os.Getenv("CAMOUFOX_URL"),
+		StackExchangeKey:        os.Getenv("STACKEXCHANGE_KEY"),
 	}
 	c.Mode = Mode(strings.ToLower(string(c.Mode)))
 	return c

@@ -19,25 +19,59 @@ import (
 	"github.com/suenot/w-popularity-backend/internal/config"
 )
 
-// Registry maps a platform to its configured Parser. Platforms without any
-// credentials are still present so the API can report ErrNotImplemented /
-// ErrAuth consistently rather than 404.
+// Registry maps a platform to its configured Parser. Every platform is wired
+// so the scheduler can dispatch jobs uniformly; parsers may individually
+// return ErrAuth / ErrNotImplemented based on their own configuration.
 type Registry map[shared.Platform]shared.Parser
 
-// Build constructs the registry from runtime config.
+// Build constructs the registry from runtime config. Each parser receives
+// only the fields its own Config struct supports — they are not symmetric.
 func Build(cfg config.Config) Registry {
 	r := Registry{}
 
-	r[shared.PlatformYouTube] = youtube.New(youtube.Config{APIKey: cfg.YouTubeAPIKey})
-	r[shared.PlatformX] = x.New(x.Config{Credential: cfg.XCredential})
-	r[shared.PlatformTelegram] = telegram.New(telegram.Config{Credential: cfg.TelegramCredential})
-	r[shared.PlatformFacebook] = facebook.New(facebook.Config{Credential: cfg.FacebookCredential})
-	r[shared.PlatformInstagram] = instagram.New(instagram.Config{Credential: cfg.InstagramCredential})
-	r[shared.PlatformLinkedIn] = linkedin.New(linkedin.Config{Credential: cfg.LinkedInCredential})
-	r[shared.PlatformHabr] = habr.New(habr.Config{Credential: cfg.HabrCredential})
-	r[shared.PlatformStackOverflow] = stackoverflow.New(stackoverflow.Config{Credential: cfg.StackOverflowCredential})
-	r[shared.PlatformTBankPulse] = tbankpulse.New(tbankpulse.Config{Credential: cfg.TBankPulseCredential})
-	r[shared.PlatformSmartLab] = smartlab.New(smartlab.Config{Credential: cfg.SmartLabCredential})
+	r[shared.PlatformYouTube] = youtube.New(youtube.Config{
+		APIKey: cfg.YouTubeAPIKey,
+		// yt-dlp is resolved via PATH inside the container.
+	})
+
+	r[shared.PlatformX] = x.New(x.Config{
+		CamoufoxURL: cfg.CamoufoxURL,
+		// NitterMirrors left empty → uses DefaultNitterMirrors. Operators
+		// can override at runtime by editing the parser config layer.
+	})
+
+	r[shared.PlatformTelegram] = telegram.New(telegram.Config{
+		Credential:  cfg.TelegramCredential,
+		CamoufoxURL: cfg.CamoufoxURL,
+	})
+
+	r[shared.PlatformFacebook] = facebook.New(facebook.Config{
+		Credential:  cfg.FacebookCredential,
+		CamoufoxURL: cfg.CamoufoxURL,
+	})
+
+	r[shared.PlatformInstagram] = instagram.New(instagram.Config{
+		CamoufoxURL: cfg.CamoufoxURL,
+	})
+
+	r[shared.PlatformLinkedIn] = linkedin.New(linkedin.Config{
+		CamoufoxURL: cfg.CamoufoxURL,
+	})
+
+	r[shared.PlatformHabr] = habr.New(habr.Config{})
+
+	r[shared.PlatformStackOverflow] = stackoverflow.New(stackoverflow.Config{
+		AppKey: cfg.StackExchangeKey,
+	})
+
+	r[shared.PlatformTBankPulse] = tbankpulse.New(tbankpulse.Config{
+		CamoufoxURL: cfg.CamoufoxURL,
+	})
+
+	r[shared.PlatformSmartLab] = smartlab.New(smartlab.Config{
+		Credential:  cfg.SmartLabCredential,
+		CamoufoxURL: cfg.CamoufoxURL,
+	})
 
 	return r
 }
