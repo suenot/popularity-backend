@@ -17,7 +17,7 @@ require (
 	github.com/suenot/w-popularity-parser-tbank-pulse v0.0.0-20260518180316-96834cd57c67
 	github.com/suenot/w-popularity-parser-telegram v0.0.0-20260518175754-141ecede99bf
 	github.com/suenot/w-popularity-parser-x v0.0.0-20260518180130-c1ca68a10f83
-	github.com/suenot/w-popularity-parser-youtube v0.0.0-20260518175608-9ab15b5088f3
+	github.com/suenot/w-popularity-parser-youtube v0.0.0-20260518181511-910c4b9b3b3c
 	github.com/suenot/w-popularity-shared v0.0.0-20260518102401-d17456f924be
 )
 

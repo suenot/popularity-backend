@@ -95,8 +95,8 @@ github.com/suenot/w-popularity-parser-telegram v0.0.0-20260518175754-141ecede99b
 github.com/suenot/w-popularity-parser-telegram v0.0.0-20260518175754-141ecede99bf/go.mod h1:Uww90PW2oHNpqT745rvHjqehGeU10KFl1s4nDy/H9Rk=
 github.com/suenot/w-popularity-parser-x v0.0.0-20260518180130-c1ca68a10f83 h1:hrXDp+Vo/FFDfw+egwPoItuCHNpiblB3G/Gc1Cezd7g=
 github.com/suenot/w-popularity-parser-x v0.0.0-20260518180130-c1ca68a10f83/go.mod h1:473HwenRJ2D4+4jexEm3zRq38s0IaytbVRKAOm3qmwE=
-github.com/suenot/w-popularity-parser-youtube v0.0.0-20260518175608-9ab15b5088f3 h1:TbunKjHv9aM33eVEVwOfYn5JU0NISSvu2/qmPPjG49g=
-github.com/suenot/w-popularity-parser-youtube v0.0.0-20260518175608-9ab15b5088f3/go.mod h1:1RMAxU0t2T3a5y+gahw+spPve2jmZnnK29Tb0crb0pc=
+github.com/suenot/w-popularity-parser-youtube v0.0.0-20260518181511-910c4b9b3b3c h1:Lg3mHFETd5AUnUbEPzUzeh4o5F5RCD5Hc6t6hL+zHyo=
+github.com/suenot/w-popularity-parser-youtube v0.0.0-20260518181511-910c4b9b3b3c/go.mod h1:1RMAxU0t2T3a5y+gahw+spPve2jmZnnK29Tb0crb0pc=
 github.com/suenot/w-popularity-shared v0.0.0-20260518102401-d17456f924be h1:1yIRmQs3ySJgpfR2qPNr/nl6Pqhu2+NminuawS60C+g=
 github.com/suenot/w-popularity-shared v0.0.0-20260518102401-d17456f924be/go.mod h1:z/0kUj8wPN451u0v4Gtq6jV+OEwhXDwmLtMCkvY9o+s=
 github.com/twitchyliquid64/golang-asm v0.15.1 h1:SU5vSMR7hnwNxj24w34ZyCi/FmDZTkS4MhqMhdFk5YI=
