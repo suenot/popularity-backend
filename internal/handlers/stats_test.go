@@ -35,6 +35,8 @@ func (m *mockRow) Scan(dest ...any) error {
 		case **float64:
 			v := m.vals[i].(float64)
 			*p = &v
+		case *[]byte:
+			*p = m.vals[i].([]byte)
 		default:
 			return errors.New("mockRow: unsupported dest type")
 		}
@@ -64,6 +66,7 @@ func TestFetchStats_Happy(t *testing.T) {
 		int64(1000), int64(50000), int64(120),
 		float64(1.5), float64(5.0), float64(20.0), float64(80.0), float64(80.0),
 		float64(10.0), float64(5.0),
+		[]byte(`{"channel_id":"UC123","reputation":42}`),
 	}}}
 	row, err := handlers.FetchStats(context.Background(), db, 42, "u")
 	if err != nil {

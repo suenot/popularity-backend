@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"encoding/json"
 	"net/http"
 	"strconv"
 	"time"
@@ -55,7 +56,7 @@ func (h *SnapshotsAPI) List(c *gin.Context) {
 	}
 
 	rows, err := h.DB.Query(c.Request.Context(), `
-		SELECT ts, followers, posts_count, total_likes, total_views, total_comments
+		SELECT ts, followers, posts_count, total_likes, total_views, total_comments, COALESCE(raw, '{}'::jsonb)
 		FROM channel_snapshots
 		WHERE channel_id=$1 AND ts >= $2 AND ts <= $3
 		ORDER BY ts ASC`,
@@ -67,19 +68,24 @@ func (h *SnapshotsAPI) List(c *gin.Context) {
 	defer rows.Close()
 
 	type point struct {
-		TS            time.Time `json:"ts"`
-		Followers     int64     `json:"followers"`
-		PostsCount    int64     `json:"posts_count"`
-		TotalLikes    int64     `json:"total_likes"`
-		TotalViews    int64     `json:"total_views"`
-		TotalComments int64     `json:"total_comments"`
+		TS            time.Time              `json:"ts"`
+		Followers     int64                  `json:"followers"`
+		PostsCount    int64                  `json:"posts_count"`
+		TotalLikes    int64                  `json:"total_likes"`
+		TotalViews    int64                  `json:"total_views"`
+		TotalComments int64                  `json:"total_comments"`
+		Raw           map[string]interface{} `json:"raw,omitempty"`
 	}
 	out := []point{}
 	for rows.Next() {
 		var p point
-		if err := rows.Scan(&p.TS, &p.Followers, &p.PostsCount, &p.TotalLikes, &p.TotalViews, &p.TotalComments); err != nil {
+		var raw []byte
+		if err := rows.Scan(&p.TS, &p.Followers, &p.PostsCount, &p.TotalLikes, &p.TotalViews, &p.TotalComments, &raw); err != nil {
 			c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 			return
+		}
+		if len(raw) > 0 && string(raw) != "{}" {
+			_ = json.Unmarshal(raw, &p.Raw)
 		}
 		out = append(out, p)
 	}
