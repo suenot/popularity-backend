@@ -6,6 +6,7 @@ import (
 	shared "github.com/suenot/w-popularity-shared"
 
 	facebook "github.com/suenot/w-popularity-parser-facebook"
+	githubp "github.com/suenot/w-popularity-parser-github"
 	habr "github.com/suenot/w-popularity-parser-habr"
 	instagram "github.com/suenot/w-popularity-parser-instagram"
 	linkedin "github.com/suenot/w-popularity-parser-linkedin"
@@ -76,6 +77,10 @@ func Build(cfg config.Config) Registry {
 
 	r[shared.PlatformReddit] = reddit.New(reddit.Config{
 		BearerToken: cfg.RedditBearerToken,
+	})
+
+	r[shared.PlatformGitHub] = githubp.New(githubp.Config{
+		Token: cfg.GitHubToken,
 	})
 
 	return r

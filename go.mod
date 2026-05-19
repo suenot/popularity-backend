@@ -9,6 +9,7 @@ require (
 	github.com/jackc/pgx/v5 v5.9.2
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/suenot/w-popularity-parser-facebook v0.0.0-20260519093306-000f26df2902
+	github.com/suenot/w-popularity-parser-github v0.0.0-20260519101732-570e921b0831
 	github.com/suenot/w-popularity-parser-habr v0.0.0-20260518175819-31ef514782a2
 	github.com/suenot/w-popularity-parser-instagram v0.0.0-20260518175944-6cd6ccf88df6
 	github.com/suenot/w-popularity-parser-linkedin v0.0.0-20260519093247-dc05aa6e018a
@@ -19,7 +20,7 @@ require (
 	github.com/suenot/w-popularity-parser-telegram v0.0.0-20260519090605-7187d13cc649
 	github.com/suenot/w-popularity-parser-x v0.0.0-20260518183556-4aece157dc9c
 	github.com/suenot/w-popularity-parser-youtube v0.0.0-20260518183324-ccf8780815cf
-	github.com/suenot/w-popularity-shared v0.0.0-20260518190708-2c23dae0af50
+	github.com/suenot/w-popularity-shared v0.0.0-20260519101309-d15b080aaf2f
 )
 
 require (

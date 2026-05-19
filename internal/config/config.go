@@ -64,6 +64,8 @@ type Config struct {
 	// Optional Reddit OAuth bearer token (REDDIT_BEARER_TOKEN env). Without
 	// it the parser uses Reddit's anonymous JSON endpoint (10 req/min cap).
 	RedditBearerToken string
+	// Optional GitHub PAT (GITHUB_TOKEN env). Bumps anon 60 req/hour → 5000.
+	GitHubToken string
 }
 
 // FromEnv reads configuration from the process environment.
@@ -96,6 +98,7 @@ func FromEnv() Config {
 		LinkedInLIAT:            os.Getenv("LINKEDIN_LI_AT"),
 		LinkedInJSESSIONID:      os.Getenv("LINKEDIN_JSESSIONID"),
 		RedditBearerToken:       os.Getenv("REDDIT_BEARER_TOKEN"),
+		GitHubToken:             os.Getenv("GITHUB_TOKEN"),
 	}
 	c.Mode = Mode(strings.ToLower(string(c.Mode)))
 	return c
