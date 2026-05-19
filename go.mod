@@ -12,7 +12,7 @@ require (
 	github.com/suenot/w-popularity-parser-github v0.0.0-20260519101732-570e921b0831
 	github.com/suenot/w-popularity-parser-habr v0.0.0-20260518175819-31ef514782a2
 	github.com/suenot/w-popularity-parser-instagram v0.0.0-20260518175944-6cd6ccf88df6
-	github.com/suenot/w-popularity-parser-linkedin v0.0.0-20260519093247-dc05aa6e018a
+	github.com/suenot/w-popularity-parser-linkedin v0.0.0-20260519145733-bfe955bd9577
 	github.com/suenot/w-popularity-parser-reddit v0.0.0-20260518190910-49fb55425740
 	github.com/suenot/w-popularity-parser-smartlab v0.0.0-20260518180128-3772c8fca15c
 	github.com/suenot/w-popularity-parser-stackoverflow v0.0.0-20260518183226-229213f97024

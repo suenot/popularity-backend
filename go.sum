@@ -85,8 +85,8 @@ github.com/suenot/w-popularity-parser-habr v0.0.0-20260518175819-31ef514782a2 h1
 github.com/suenot/w-popularity-parser-habr v0.0.0-20260518175819-31ef514782a2/go.mod h1:ibRuf19eOWss3DF82J+PrnfMAw2wD+mWK/bJ00MTJHY=
 github.com/suenot/w-popularity-parser-instagram v0.0.0-20260518175944-6cd6ccf88df6 h1:EijNo/VQLqHmFQA9f0RQRYW0DCd8F4zxCZtl3UKMSH0=
 github.com/suenot/w-popularity-parser-instagram v0.0.0-20260518175944-6cd6ccf88df6/go.mod h1:raDA3OPdrv5NbfhnZMvME4xKue3XUuzOEo7VwB6BpX0=
-github.com/suenot/w-popularity-parser-linkedin v0.0.0-20260519093247-dc05aa6e018a h1:UQWTORysWifs/sFaACvqgE/zSX0VN3qYk5mY/0mQmgU=
-github.com/suenot/w-popularity-parser-linkedin v0.0.0-20260519093247-dc05aa6e018a/go.mod h1:SLx8HPk1tHk5xVzllzyLiiOWSNZ1MWZqFLN8WSSD558=
+github.com/suenot/w-popularity-parser-linkedin v0.0.0-20260519145733-bfe955bd9577 h1:GatW+QhVY65TH8Gk/Pk93ATzgz3V2fQh2OadBlN2dAI=
+github.com/suenot/w-popularity-parser-linkedin v0.0.0-20260519145733-bfe955bd9577/go.mod h1:SLx8HPk1tHk5xVzllzyLiiOWSNZ1MWZqFLN8WSSD558=
 github.com/suenot/w-popularity-parser-reddit v0.0.0-20260518190910-49fb55425740 h1:owCMkoZ8gZeyF6LYI/t4FTocyLaKsCVriPRtBaLvtV8=
 github.com/suenot/w-popularity-parser-reddit v0.0.0-20260518190910-49fb55425740/go.mod h1:9XMKMbjyrDc8A9KfZ7pwbMelRzCZgiZPIZ/V9JR2QFk=
 github.com/suenot/w-popularity-parser-smartlab v0.0.0-20260518180128-3772c8fca15c h1:A8AVI7k9lA6GmVX+3QxDKdKj8W4pP8wdXbkzd4VsMpY=
