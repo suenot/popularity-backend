@@ -8,10 +8,10 @@ require (
 	github.com/golang-jwt/jwt/v5 v5.3.1
 	github.com/jackc/pgx/v5 v5.9.2
 	github.com/robfig/cron/v3 v3.0.1
-	github.com/suenot/w-popularity-parser-facebook v0.0.0-20260518183137-21442fcf664e
+	github.com/suenot/w-popularity-parser-facebook v0.0.0-20260519093306-000f26df2902
 	github.com/suenot/w-popularity-parser-habr v0.0.0-20260518175819-31ef514782a2
 	github.com/suenot/w-popularity-parser-instagram v0.0.0-20260518175944-6cd6ccf88df6
-	github.com/suenot/w-popularity-parser-linkedin v0.0.0-20260518183250-fb12acb38abd
+	github.com/suenot/w-popularity-parser-linkedin v0.0.0-20260519093247-dc05aa6e018a
 	github.com/suenot/w-popularity-parser-reddit v0.0.0-20260518190910-49fb55425740
 	github.com/suenot/w-popularity-parser-smartlab v0.0.0-20260518180128-3772c8fca15c
 	github.com/suenot/w-popularity-parser-stackoverflow v0.0.0-20260518183226-229213f97024
