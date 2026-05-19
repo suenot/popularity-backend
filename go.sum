@@ -93,8 +93,8 @@ github.com/suenot/w-popularity-parser-stackoverflow v0.0.0-20260518183226-229213
 github.com/suenot/w-popularity-parser-stackoverflow v0.0.0-20260518183226-229213f97024/go.mod h1:nBB0ZdNp5wC2XRY8VuFSfYMQlKj2bwYAm3xsNZ26kSc=
 github.com/suenot/w-popularity-parser-tbank-pulse v0.0.0-20260518180316-96834cd57c67 h1:oRlpLhVMTxXFwftBL6IEfSjs5qy3S8hHiI/8t4ZaGsA=
 github.com/suenot/w-popularity-parser-tbank-pulse v0.0.0-20260518180316-96834cd57c67/go.mod h1:cs1jBGexmNq742wVMZ8lTZPnGG3E4a7G/bE+VO96jgk=
-github.com/suenot/w-popularity-parser-telegram v0.0.0-20260518175754-141ecede99bf h1:kY3kk9DF/GEJ6N+RmgLeRUEVPz0he0OZJGZr/rE5nb8=
-github.com/suenot/w-popularity-parser-telegram v0.0.0-20260518175754-141ecede99bf/go.mod h1:Uww90PW2oHNpqT745rvHjqehGeU10KFl1s4nDy/H9Rk=
+github.com/suenot/w-popularity-parser-telegram v0.0.0-20260519090605-7187d13cc649 h1:euMnWfWDNMwhdd4nQitGGZ08/xz+2Ig+Jiewz5HHF1g=
+github.com/suenot/w-popularity-parser-telegram v0.0.0-20260519090605-7187d13cc649/go.mod h1:Uww90PW2oHNpqT745rvHjqehGeU10KFl1s4nDy/H9Rk=
 github.com/suenot/w-popularity-parser-x v0.0.0-20260518183556-4aece157dc9c h1:S/kt/DFOurOn8d2p+7S9QnXXuee3bAbku2EUkE0ehqs=
 github.com/suenot/w-popularity-parser-x v0.0.0-20260518183556-4aece157dc9c/go.mod h1:HXeVwnWX2uwSN4t5HVFCTEOTGqWhD6QMVUZAD27G5lY=
 github.com/suenot/w-popularity-parser-youtube v0.0.0-20260518183324-ccf8780815cf h1:9SjezDclHHAG8QojaOkSJF6YOKqLxbI/Ir7d4LkERnk=
