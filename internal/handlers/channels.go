@@ -89,7 +89,7 @@ func (h *ChannelsAPI) List(c *gin.Context) {
 	rows, err := h.DB.Query(c.Request.Context(), `
 		SELECT c.id, c.platform, c.handle, c.url, c.added_at,
 		       s.followers, s.total_views, s.posts_count,
-		       s.d7_pct, s.d30_pct, s.d90_pct, s.d365_pct, s.cagr_1y_pct,
+		       s.d1_pct, s.d7_pct, s.d30_pct, s.d90_pct, s.d365_pct, s.cagr_1y_pct,
 		       s.velocity_7d, s.velocity_28d, s.latest_ts
 		FROM channels c
 		LEFT JOIN v_channel_stats s ON s.channel_id = c.id
@@ -110,6 +110,7 @@ func (h *ChannelsAPI) List(c *gin.Context) {
 		Followers  *int64   `json:"followers"`
 		TotalViews *int64   `json:"total_views"`
 		PostsCount *int64   `json:"posts_count"`
+		D1Pct      *float64 `json:"d1_pct"`
 		D7Pct      *float64 `json:"d7_pct"`
 		D30Pct     *float64 `json:"d30_pct"`
 		D90Pct     *float64 `json:"d90_pct"`
@@ -126,7 +127,7 @@ func (h *ChannelsAPI) List(c *gin.Context) {
 		var latestTS pgtype.Timestamptz
 		if err := rows.Scan(&it.ID, &it.Platform, &it.Handle, &it.URL, &addedAt,
 			&it.Followers, &it.TotalViews, &it.PostsCount,
-			&it.D7Pct, &it.D30Pct, &it.D90Pct, &it.D365Pct, &it.CAGR1YPct,
+			&it.D1Pct, &it.D7Pct, &it.D30Pct, &it.D90Pct, &it.D365Pct, &it.CAGR1YPct,
 			&it.Velocity7, &it.Velocity28, &latestTS); err != nil {
 			c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 			return

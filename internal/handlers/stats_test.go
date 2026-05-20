@@ -64,7 +64,8 @@ func TestFetchStats_Happy(t *testing.T) {
 	db := &mockDB{row: &mockRow{vals: []any{
 		int64(42), "youtube", "google",
 		int64(1000), int64(50000), int64(120),
-		float64(1.5), float64(5.0), float64(20.0), float64(80.0), float64(80.0),
+		// d1, d7, d30, d90, d365, cagr_1y, velocity_7d, velocity_28d
+		float64(0.5), float64(1.5), float64(5.0), float64(20.0), float64(80.0), float64(80.0),
 		float64(10.0), float64(5.0),
 		[]byte(`{"channel_id":"UC123","reputation":42}`),
 	}}}
@@ -77,6 +78,9 @@ func TestFetchStats_Happy(t *testing.T) {
 	}
 	if row.Followers == nil || *row.Followers != 1000 {
 		t.Fatalf("bad followers: %+v", row.Followers)
+	}
+	if row.D1Pct == nil || *row.D1Pct != 0.5 {
+		t.Fatalf("bad d1_pct: %+v", row.D1Pct)
 	}
 	if row.D7Pct == nil || *row.D7Pct != 1.5 {
 		t.Fatalf("bad d7_pct: %+v", row.D7Pct)

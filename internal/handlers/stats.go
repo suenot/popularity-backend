@@ -21,6 +21,7 @@ type StatsRow struct {
 	Followers  *int64                 `json:"followers"`
 	TotalViews *int64                 `json:"total_views"`
 	PostsCount *int64                 `json:"posts_count"`
+	D1Pct      *float64               `json:"d1_pct"`
 	D7Pct      *float64               `json:"d7_pct"`
 	D30Pct     *float64               `json:"d30_pct"`
 	D90Pct     *float64               `json:"d90_pct"`
@@ -75,7 +76,7 @@ func FetchStats(ctx context.Context, db StatsQuerier, channelID int64, userID st
 	err := db.QueryRow(ctx, `
 		SELECT s.channel_id, s.platform, s.handle,
 		       s.followers, s.total_views, s.posts_count,
-		       s.d7_pct, s.d30_pct, s.d90_pct, s.d365_pct, s.cagr_1y_pct,
+		       s.d1_pct, s.d7_pct, s.d30_pct, s.d90_pct, s.d365_pct, s.cagr_1y_pct,
 		       s.velocity_7d, s.velocity_28d,
 		       COALESCE((
 		           SELECT cs.raw FROM channel_snapshots cs
@@ -88,7 +89,7 @@ func FetchStats(ctx context.Context, db StatsQuerier, channelID int64, userID st
 		channelID, userID,
 	).Scan(&r.ChannelID, &r.Platform, &r.Handle,
 		&r.Followers, &r.TotalViews, &r.PostsCount,
-		&r.D7Pct, &r.D30Pct, &r.D90Pct, &r.D365Pct, &r.CAGR1YPct,
+		&r.D1Pct, &r.D7Pct, &r.D30Pct, &r.D90Pct, &r.D365Pct, &r.CAGR1YPct,
 		&r.Velocity7, &r.Velocity28,
 		&raw)
 	if err == nil && len(raw) > 0 && string(raw) != "{}" {
