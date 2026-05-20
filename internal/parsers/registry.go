@@ -10,6 +10,7 @@ import (
 	habr "github.com/suenot/w-popularity-parser-habr"
 	instagram "github.com/suenot/w-popularity-parser-instagram"
 	linkedin "github.com/suenot/w-popularity-parser-linkedin"
+	mmauth "github.com/suenot/w-popularity-parser-marketmaker-auth"
 	reddit "github.com/suenot/w-popularity-parser-reddit"
 	smartlab "github.com/suenot/w-popularity-parser-smartlab"
 	stackoverflow "github.com/suenot/w-popularity-parser-stackoverflow"
@@ -82,6 +83,8 @@ func Build(cfg config.Config) Registry {
 	r[shared.PlatformGitHub] = githubp.New(githubp.Config{
 		Token: cfg.GitHubToken,
 	})
+
+	r[shared.PlatformMarketmakerAuth] = mmauth.New(mmauth.Config{})
 
 	return r
 }

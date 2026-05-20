@@ -77,8 +77,8 @@ github.com/stretchr/testify v1.8.4/go.mod h1:sz/lmYIOXD/1dqDmKjjqLyZ2RngseejIcXl
 github.com/stretchr/testify v1.10.0/go.mod h1:r2ic/lqez/lEtzL7wO/rwa5dbSLXVDPFyf8C91i36aY=
 github.com/stretchr/testify v1.11.1 h1:7s2iGBzp5EwR7/aIZr8ao5+dra3wiQyKjjFuvgVKu7U=
 github.com/stretchr/testify v1.11.1/go.mod h1:wZwfW3scLgRK+23gO65QZefKpKQRnfz6sD981Nm4B6U=
-github.com/suenot/w-popularity-parser-facebook v0.0.0-20260519093306-000f26df2902 h1:j+tUeF1vTFGfV0AU6TUT3Eu/fxHVxsFLr0GZhVxDuiI=
-github.com/suenot/w-popularity-parser-facebook v0.0.0-20260519093306-000f26df2902/go.mod h1:19/zqHd+X67VAWFAv81q8c1CqKoXFt/pQzKV+NtL6+w=
+github.com/suenot/w-popularity-parser-facebook v0.0.0-20260519151618-fd6fbb0e77dc h1:ePhxPH0J58BNCb32vvV3lH1+eXhY0zAoXGk2hmgVwdQ=
+github.com/suenot/w-popularity-parser-facebook v0.0.0-20260519151618-fd6fbb0e77dc/go.mod h1:19/zqHd+X67VAWFAv81q8c1CqKoXFt/pQzKV+NtL6+w=
 github.com/suenot/w-popularity-parser-github v0.0.0-20260519101732-570e921b0831 h1:QSbcIDY7cCurhh955e5yj3lZt2uuNDzqrCCRYOzOYjk=
 github.com/suenot/w-popularity-parser-github v0.0.0-20260519101732-570e921b0831/go.mod h1:luuo21chvVU/3+sWwf21eyghXYOLFhI/0GQYvOQbf7Y=
 github.com/suenot/w-popularity-parser-habr v0.0.0-20260518175819-31ef514782a2 h1:HBjI26kyt1JcNGucUf6s9R6AxNXWhVzQgIk781uY5Lg=
@@ -87,6 +87,8 @@ github.com/suenot/w-popularity-parser-instagram v0.0.0-20260518175944-6cd6ccf88d
 github.com/suenot/w-popularity-parser-instagram v0.0.0-20260518175944-6cd6ccf88df6/go.mod h1:raDA3OPdrv5NbfhnZMvME4xKue3XUuzOEo7VwB6BpX0=
 github.com/suenot/w-popularity-parser-linkedin v0.0.0-20260519145733-bfe955bd9577 h1:GatW+QhVY65TH8Gk/Pk93ATzgz3V2fQh2OadBlN2dAI=
 github.com/suenot/w-popularity-parser-linkedin v0.0.0-20260519145733-bfe955bd9577/go.mod h1:SLx8HPk1tHk5xVzllzyLiiOWSNZ1MWZqFLN8WSSD558=
+github.com/suenot/w-popularity-parser-marketmaker-auth v0.0.0-20260520002615-c319d26ade64 h1:xOTeMH9OKqAmh7EWnveoIaivwpweecF1wVOhD37+HzM=
+github.com/suenot/w-popularity-parser-marketmaker-auth v0.0.0-20260520002615-c319d26ade64/go.mod h1:Ei2oxQIW/rz6VddAydbQSe0VmqVGppHi58IX+GDYxAY=
 github.com/suenot/w-popularity-parser-reddit v0.0.0-20260518190910-49fb55425740 h1:owCMkoZ8gZeyF6LYI/t4FTocyLaKsCVriPRtBaLvtV8=
 github.com/suenot/w-popularity-parser-reddit v0.0.0-20260518190910-49fb55425740/go.mod h1:9XMKMbjyrDc8A9KfZ7pwbMelRzCZgiZPIZ/V9JR2QFk=
 github.com/suenot/w-popularity-parser-smartlab v0.0.0-20260518180128-3772c8fca15c h1:A8AVI7k9lA6GmVX+3QxDKdKj8W4pP8wdXbkzd4VsMpY=
@@ -101,8 +103,8 @@ github.com/suenot/w-popularity-parser-x v0.0.0-20260518183556-4aece157dc9c h1:S/
 github.com/suenot/w-popularity-parser-x v0.0.0-20260518183556-4aece157dc9c/go.mod h1:HXeVwnWX2uwSN4t5HVFCTEOTGqWhD6QMVUZAD27G5lY=
 github.com/suenot/w-popularity-parser-youtube v0.0.0-20260518183324-ccf8780815cf h1:9SjezDclHHAG8QojaOkSJF6YOKqLxbI/Ir7d4LkERnk=
 github.com/suenot/w-popularity-parser-youtube v0.0.0-20260518183324-ccf8780815cf/go.mod h1:1RMAxU0t2T3a5y+gahw+spPve2jmZnnK29Tb0crb0pc=
-github.com/suenot/w-popularity-shared v0.0.0-20260519101309-d15b080aaf2f h1:hmLWMsquXbtIWw1U7X/qO98q3d1Uocr4SdVHaddgaOE=
-github.com/suenot/w-popularity-shared v0.0.0-20260519101309-d15b080aaf2f/go.mod h1:z/0kUj8wPN451u0v4Gtq6jV+OEwhXDwmLtMCkvY9o+s=
+github.com/suenot/w-popularity-shared v0.0.0-20260520002435-b0956a1da1dd h1:pwwQoqTvIdHZ/vAtf1O0K+l+pd1ujqSm9PwSEWEV7ow=
+github.com/suenot/w-popularity-shared v0.0.0-20260520002435-b0956a1da1dd/go.mod h1:z/0kUj8wPN451u0v4Gtq6jV+OEwhXDwmLtMCkvY9o+s=
 github.com/twitchyliquid64/golang-asm v0.15.1 h1:SU5vSMR7hnwNxj24w34ZyCi/FmDZTkS4MhqMhdFk5YI=
 github.com/twitchyliquid64/golang-asm v0.15.1/go.mod h1:a1lVb/DtPvCB8fslRZhAngC2+aY1QWCk3Cedj/Gdt08=
 github.com/ugorji/go/codec v1.3.1 h1:waO7eEiFDwidsBN6agj1vJQ4AG7lh2yqXyOXqhgQuyY=
