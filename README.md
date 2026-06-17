@@ -1,4 +1,4 @@
-# w-popularity-backend
+# popularity-backend
 
 Go service for [w_popularity](https://github.com/suenot/w_popularity): one binary that
 hosts both a JWT-protected REST API (gin) and a Postgres-backed cron scheduler that
@@ -13,7 +13,7 @@ fetches audience snapshots from ten social platforms.
   drains them via `SELECT … FOR UPDATE SKIP LOCKED`.
 - **Persistence** — Postgres via `pgx/v5`, schema embedded in
   `internal/db/migrations/`.
-- **Parsers** — ten `github.com/suenot/w-popularity-parser-*` modules wired
+- **Parsers** — ten `github.com/suenot/<platform>-auto` modules wired
   by `internal/parsers.Build`. YouTube has a real impl; others return
   `shared.ErrNotImplemented`.
 
@@ -64,7 +64,7 @@ All under `/api/v1`, all require `Authorization: Bearer <jwt>` except `GET /heal
 ```
 go build ./...
 go test ./...
-docker build -t w-popularity-backend .
+docker build -t popularity-backend .
 ```
 
 `TestClaimSkipLocked` is skipped unless `TEST_DATABASE_URL` is set.

@@ -9,7 +9,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/jackc/pgx/v5/pgxpool"
 
-	"github.com/suenot/w-popularity-backend/internal/middleware"
+	"github.com/suenot/popularity-backend/internal/middleware"
 )
 
 // SnapshotsAPI exposes channel & post time-series endpoints.

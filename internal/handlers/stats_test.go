@@ -7,7 +7,7 @@ import (
 
 	"github.com/jackc/pgx/v5"
 
-	"github.com/suenot/w-popularity-backend/internal/handlers"
+	"github.com/suenot/popularity-backend/internal/handlers"
 )
 
 // mockRow implements pgx.Row over a fixed value set.

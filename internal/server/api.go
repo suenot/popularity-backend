@@ -13,12 +13,12 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/jackc/pgx/v5/pgxpool"
 
-	"github.com/suenot/w-popularity-backend/internal/auth"
-	"github.com/suenot/w-popularity-backend/internal/config"
-	"github.com/suenot/w-popularity-backend/internal/db"
-	"github.com/suenot/w-popularity-backend/internal/handlers"
-	"github.com/suenot/w-popularity-backend/internal/jobs"
-	"github.com/suenot/w-popularity-backend/internal/middleware"
+	"github.com/suenot/popularity-backend/internal/auth"
+	"github.com/suenot/popularity-backend/internal/config"
+	"github.com/suenot/popularity-backend/internal/db"
+	"github.com/suenot/popularity-backend/internal/handlers"
+	"github.com/suenot/popularity-backend/internal/jobs"
+	"github.com/suenot/popularity-backend/internal/middleware"
 )
 
 // RunAPI boots the HTTP server. Cancel ctx to shut down gracefully.
@@ -68,12 +68,17 @@ func buildRouter(cfg config.Config, pool *pgxpool.Pool, v *auth.Verifier, q *job
 	r.GET("/healthz", handlers.Health(pool))
 
 	api := r.Group("/api/v1")
-	api.Use(middleware.JWT(v, cfg.AuthServiceName))
+	if cfg.InsecureSkipAuth {
+		api.Use(middleware.OptionalJWT(v, cfg.AuthServiceName, cfg.DevUserID))
+	} else {
+		api.Use(middleware.JWT(v, cfg.AuthServiceName))
+	}
 	{
 		channels := &handlers.ChannelsAPI{DB: pool, Queue: q}
 		api.POST("/channels", channels.Create)
 		api.GET("/channels", channels.List)
 		api.GET("/channels/:id", channels.Get)
+		api.POST("/channels/:id/fetch", channels.Fetch)
 		api.DELETE("/channels/:id", channels.Delete)
 
 		snaps := &handlers.SnapshotsAPI{DB: pool}

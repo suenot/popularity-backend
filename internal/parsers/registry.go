@@ -3,23 +3,25 @@
 package parsers
 
 import (
-	shared "github.com/suenot/w-popularity-shared"
+	shared "github.com/suenot/socials-auto"
 
-	facebook "github.com/suenot/w-popularity-parser-facebook"
-	githubp "github.com/suenot/w-popularity-parser-github"
-	habr "github.com/suenot/w-popularity-parser-habr"
-	instagram "github.com/suenot/w-popularity-parser-instagram"
-	linkedin "github.com/suenot/w-popularity-parser-linkedin"
-	mmauth "github.com/suenot/w-popularity-parser-marketmaker-auth"
-	reddit "github.com/suenot/w-popularity-parser-reddit"
-	smartlab "github.com/suenot/w-popularity-parser-smartlab"
-	stackoverflow "github.com/suenot/w-popularity-parser-stackoverflow"
-	tbankpulse "github.com/suenot/w-popularity-parser-tbank-pulse"
-	telegram "github.com/suenot/w-popularity-parser-telegram"
-	x "github.com/suenot/w-popularity-parser-x"
-	youtube "github.com/suenot/w-popularity-parser-youtube"
+	discord "github.com/suenot/discord-auto"
+	facebook "github.com/suenot/facebook-auto"
+	githubp "github.com/suenot/github-auto"
+	githubrepo "github.com/suenot/github-repo-auto"
+	habr "github.com/suenot/habr-auto"
+	instagram "github.com/suenot/instagram-auto"
+	linkedin "github.com/suenot/linkedin-auto"
+	mmauth "github.com/suenot/marketmaker-auth-auto"
+	reddit "github.com/suenot/reddit-auto"
+	smartlab "github.com/suenot/smartlab-auto"
+	stackoverflow "github.com/suenot/stackoverflow-auto"
+	tbankpulse "github.com/suenot/tbank-pulse-auto"
+	telegram "github.com/suenot/telegram-auto"
+	x "github.com/suenot/x-auto"
+	youtube "github.com/suenot/youtube-auto"
 
-	"github.com/suenot/w-popularity-backend/internal/config"
+	"github.com/suenot/popularity-backend/internal/config"
 )
 
 // Registry maps a platform to its configured Parser. Every platform is wired
@@ -82,6 +84,14 @@ func Build(cfg config.Config) Registry {
 
 	r[shared.PlatformGitHub] = githubp.New(githubp.Config{
 		Token: cfg.GitHubToken,
+	})
+
+	r[shared.PlatformGitHubRepo] = githubrepo.New(githubrepo.Config{
+		Token: cfg.GitHubToken,
+	})
+
+	r[shared.PlatformDiscord] = discord.New(discord.Config{
+		Token: cfg.DiscordBotToken,
 	})
 
 	r[shared.PlatformMarketmakerAuth] = mmauth.New(mmauth.Config{})

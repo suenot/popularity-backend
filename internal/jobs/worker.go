@@ -8,9 +8,9 @@ import (
 	"time"
 
 	"github.com/jackc/pgx/v5/pgxpool"
-	shared "github.com/suenot/w-popularity-shared"
+	shared "github.com/suenot/socials-auto"
 
-	"github.com/suenot/w-popularity-backend/internal/parsers"
+	"github.com/suenot/popularity-backend/internal/parsers"
 )
 
 // Pool runs N goroutines that drain the fetch-job queue.

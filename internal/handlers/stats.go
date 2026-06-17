@@ -10,7 +10,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/jackc/pgx/v5"
 
-	"github.com/suenot/w-popularity-backend/internal/middleware"
+	"github.com/suenot/popularity-backend/internal/middleware"
 )
 
 // StatsRow is one row from v_channel_stats — the public KPI shape.

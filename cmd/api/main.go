@@ -11,8 +11,8 @@ import (
 	"sync"
 	"syscall"
 
-	"github.com/suenot/w-popularity-backend/internal/config"
-	"github.com/suenot/w-popularity-backend/internal/server"
+	"github.com/suenot/popularity-backend/internal/config"
+	"github.com/suenot/popularity-backend/internal/server"
 )
 
 func main() {

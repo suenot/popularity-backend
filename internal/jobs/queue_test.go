@@ -8,7 +8,7 @@ import (
 
 	"github.com/jackc/pgx/v5/pgxpool"
 
-	"github.com/suenot/w-popularity-backend/internal/jobs"
+	"github.com/suenot/popularity-backend/internal/jobs"
 )
 
 // TestClaimSkipLocked spawns two parallel claimers against a real Postgres

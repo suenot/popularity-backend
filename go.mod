@@ -1,4 +1,4 @@
-module github.com/suenot/w-popularity-backend
+module github.com/suenot/popularity-backend
 
 go 1.25.0
 
@@ -8,20 +8,22 @@ require (
 	github.com/golang-jwt/jwt/v5 v5.3.1
 	github.com/jackc/pgx/v5 v5.9.2
 	github.com/robfig/cron/v3 v3.0.1
-	github.com/suenot/w-popularity-parser-facebook v0.0.0-20260519151618-fd6fbb0e77dc
-	github.com/suenot/w-popularity-parser-github v0.0.0-20260519101732-570e921b0831
-	github.com/suenot/w-popularity-parser-habr v0.0.0-20260518175819-31ef514782a2
-	github.com/suenot/w-popularity-parser-instagram v0.0.0-20260518175944-6cd6ccf88df6
-	github.com/suenot/w-popularity-parser-linkedin v0.0.0-20260519145733-bfe955bd9577
-	github.com/suenot/w-popularity-parser-marketmaker-auth v0.0.0-20260520002615-c319d26ade64
-	github.com/suenot/w-popularity-parser-reddit v0.0.0-20260518190910-49fb55425740
-	github.com/suenot/w-popularity-parser-smartlab v0.0.0-20260518180128-3772c8fca15c
-	github.com/suenot/w-popularity-parser-stackoverflow v0.0.0-20260518183226-229213f97024
-	github.com/suenot/w-popularity-parser-tbank-pulse v0.0.0-20260518180316-96834cd57c67
-	github.com/suenot/w-popularity-parser-telegram v0.0.0-20260519090605-7187d13cc649
-	github.com/suenot/w-popularity-parser-x v0.0.0-20260518183556-4aece157dc9c
-	github.com/suenot/w-popularity-parser-youtube v0.0.0-20260518183324-ccf8780815cf
-	github.com/suenot/w-popularity-shared v0.0.0-20260520002435-b0956a1da1dd
+	github.com/suenot/discord-auto v0.0.0-20260617144203-60dc36480195
+	github.com/suenot/facebook-auto v0.0.0-20260617144042-0c222fad17b3
+	github.com/suenot/github-auto v0.0.0-20260617144105-f2b3a6877fdc
+	github.com/suenot/github-repo-auto v0.0.0-20260617144210-42d996acf0da
+	github.com/suenot/habr-auto v0.0.0-20260617144051-d8e4787bebf9
+	github.com/suenot/instagram-auto v0.0.0-20260617144045-715778e8af29
+	github.com/suenot/linkedin-auto v0.0.0-20260617144048-bdeb77b604d6
+	github.com/suenot/marketmaker-auth-auto v0.0.0-20260617144107-2aea580a8bea
+	github.com/suenot/reddit-auto v0.0.0-20260617144102-022b00e1ceee
+	github.com/suenot/smartlab-auto v0.0.0-20260617144059-eae640eed716
+	github.com/suenot/socials-auto v0.0.0-20260617143605-3f3b401c45a1
+	github.com/suenot/stackoverflow-auto v0.0.0-20260617144054-a366471488a6
+	github.com/suenot/tbank-pulse-auto v0.0.0-20260617144057-b73ae04f9cd7
+	github.com/suenot/telegram-auto v0.0.0-20260617144039-e857a457358a
+	github.com/suenot/x-auto v0.0.0-20260617144036-af779a01dc8b
+	github.com/suenot/youtube-auto v0.0.0-20260617144033-fd379e684c2d
 )
 
 require (

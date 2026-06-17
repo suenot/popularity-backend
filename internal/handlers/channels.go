@@ -12,8 +12,8 @@ import (
 	"github.com/jackc/pgx/v5/pgtype"
 	"github.com/jackc/pgx/v5/pgxpool"
 
-	"github.com/suenot/w-popularity-backend/internal/jobs"
-	"github.com/suenot/w-popularity-backend/internal/middleware"
+	"github.com/suenot/popularity-backend/internal/jobs"
+	"github.com/suenot/popularity-backend/internal/middleware"
 )
 
 // ChannelsAPI groups channel CRUD endpoints.
@@ -168,6 +168,31 @@ func (h *ChannelsAPI) Get(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		"id": id, "platform": platform, "handle": handle, "url": url,
 	})
+}
+
+// Fetch handles POST /api/v1/channels/:id/fetch — enqueues a manual refresh.
+func (h *ChannelsAPI) Fetch(c *gin.Context) {
+	userID := middleware.UserID(c)
+	id, err := strconv.ParseInt(c.Param("id"), 10, 64)
+	if err != nil {
+		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": "bad id"})
+		return
+	}
+	var exists bool
+	err = h.DB.QueryRow(c.Request.Context(),
+		`SELECT true FROM channels WHERE id=$1 AND user_id=$2`, id, userID).Scan(&exists)
+	if errors.Is(err, pgx.ErrNoRows) {
+		c.AbortWithStatusJSON(http.StatusNotFound, gin.H{"error": "not found"})
+		return
+	}
+	if err != nil {
+		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+	if h.Queue != nil {
+		_, _ = h.Queue.Enqueue(c.Request.Context(), id, time.Time{})
+	}
+	c.JSON(http.StatusAccepted, gin.H{"enqueued": true})
 }
 
 // Delete handles DELETE /api/v1/channels/:id.

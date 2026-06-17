@@ -8,9 +8,9 @@ import (
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/robfig/cron/v3"
 
-	"github.com/suenot/w-popularity-backend/internal/config"
-	"github.com/suenot/w-popularity-backend/internal/jobs"
-	"github.com/suenot/w-popularity-backend/internal/parsers"
+	"github.com/suenot/popularity-backend/internal/config"
+	"github.com/suenot/popularity-backend/internal/jobs"
+	"github.com/suenot/popularity-backend/internal/parsers"
 )
 
 // RunScheduler starts the cron + worker pool. Blocks until ctx is cancelled.

@@ -66,6 +66,15 @@ type Config struct {
 	RedditBearerToken string
 	// Optional GitHub PAT (GITHUB_TOKEN env). Bumps anon 60 req/hour → 5000.
 	GitHubToken string
+	// Optional Discord bot token (DISCORD_BOT_TOKEN env). Used for invite API
+	// lookups with higher rate limits.
+	DiscordBotToken string
+
+	// INSECURE_SKIP_AUTH disables JWT verification and injects a fake dev user.
+	// Only ever set this in local development.
+	InsecureSkipAuth bool
+	// DevUserID is the synthetic user ID injected when InsecureSkipAuth is true.
+	DevUserID string
 }
 
 // FromEnv reads configuration from the process environment.
@@ -99,6 +108,9 @@ func FromEnv() Config {
 		LinkedInJSESSIONID:      os.Getenv("LINKEDIN_JSESSIONID"),
 		RedditBearerToken:       os.Getenv("REDDIT_BEARER_TOKEN"),
 		GitHubToken:             os.Getenv("GITHUB_TOKEN"),
+		DiscordBotToken:         os.Getenv("DISCORD_BOT_TOKEN"),
+		InsecureSkipAuth:        getEnv("INSECURE_SKIP_AUTH", "false") == "true",
+		DevUserID:               getEnv("DEV_USER_ID", "dev-local"),
 	}
 	c.Mode = Mode(strings.ToLower(string(c.Mode)))
 	return c
