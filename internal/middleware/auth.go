@@ -34,8 +34,10 @@ func JWT(v *auth.Verifier, serviceName string) gin.HandlerFunc {
 			return
 		}
 		if serviceName != "" {
-			if _, ok := claims.Services[serviceName]; !ok {
-				c.AbortWithStatusJSON(http.StatusForbidden, gin.H{"error": "service not granted"})
+			// Access is admin-only: a `user` or `superuser` role on the service
+			// is NOT sufficient. Only `admin` on serviceName may use the API.
+			if claims.Services[serviceName] != "admin" {
+				c.AbortWithStatusJSON(http.StatusForbidden, gin.H{"error": "admin role required for " + serviceName})
 				return
 			}
 		}
@@ -70,8 +72,10 @@ func OptionalJWT(v *auth.Verifier, serviceName, devUserID string) gin.HandlerFun
 			return
 		}
 		if serviceName != "" {
-			if _, ok := claims.Services[serviceName]; !ok {
-				c.AbortWithStatusJSON(http.StatusForbidden, gin.H{"error": "service not granted"})
+			// Access is admin-only: a `user` or `superuser` role on the service
+			// is NOT sufficient. Only `admin` on serviceName may use the API.
+			if claims.Services[serviceName] != "admin" {
+				c.AbortWithStatusJSON(http.StatusForbidden, gin.H{"error": "admin role required for " + serviceName})
 				return
 			}
 		}
